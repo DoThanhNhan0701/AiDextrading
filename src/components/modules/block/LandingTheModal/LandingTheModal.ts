@@ -3,15 +3,26 @@ import styled from 'styled-components';
 export const LandingTheModalWrap = styled.div`
   .LandingTheModalImage {
     position: relative;
-    background-image: url(/images/common/LandingTheModal.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
     width: 100%;
-    max-width: 1360px;
-    height: auto;
-    aspect-ratio: 1360 / 804;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0px 0px 48px 48px;
+
+    @media (max-width: 820px) {
+      height: 600px;
+    }
+
+    @media ${(props) => props.theme.breakpoints.mdMax} {
+      height: 700px;
+    }
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      height: 700px;
+    }
+
+    @media ${(props) => props.theme.breakpoints.xsMax} {
+      height: 625px;
+    }
   }
 `;
 
@@ -27,6 +38,16 @@ export const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      padding: 0 10px;
+    }
+  }
+
+  .btn-hide {
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   .header-left {
@@ -46,6 +67,10 @@ export const Header = styled.div`
     font-weight: 500;
     gap: 24px;
 
+    @media ${(props) => props.theme.breakpoints.mdMax} {
+      display: none;
+    }
+
     p {
       cursor: pointer;
     }
@@ -54,11 +79,16 @@ export const Header = styled.div`
   .header-right {
     display: flex;
     gap: 8px;
+
+    @media ${(props) => props.theme.breakpoints.mdMax} {
+      display: none;
+    }
   }
 `;
 
 export const ContentBlock = styled.div`
   margin-top: 80px;
+  padding: 0 10px;
 
   .grow-on-your {
     display: flex;
@@ -70,6 +100,11 @@ export const ContentBlock = styled.div`
     text-align: center;
     font-size: 70px;
     line-height: 70px;
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      font-size: 54px;
+      line-height: 54px;
+    }
   }
 
   .description {
@@ -79,6 +114,11 @@ export const ContentBlock = styled.div`
     text-align: center;
     font-size: 20px;
     margin-top: 30px;
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      font-size: 16px;
+      line-height: 25.6px;
+    }
   }
 
   .btn-contact-sales {
@@ -116,6 +156,14 @@ export const SliderWrap = styled.div<{ $count: number }>`
   overflow: hidden;
   width: calc(1 * ${(props) => props.$count});
   padding: 90px 0;
+
+  @media ${(props) => props.theme.breakpoints.mdMax} {
+    padding: 45px 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.smMax} {
+    padding: 40px 0;
+  }
 
   .partners {
     animation: scroll 20s linear infinite;

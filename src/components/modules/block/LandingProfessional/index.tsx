@@ -3,22 +3,30 @@ import { Col, Row } from 'antd';
 import Image from 'next/image';
 import * as S from './LandingProfessional';
 import Button from '@/components/core/common/Button';
+import LandingProfessionalB from '@/public/images/common/LandingProfessional.png';
 
 export default function LandingProfessional() {
   return (
     <S.LandingProfessionalWrap>
-      <div className="LandingProfessional" />
+      <Image
+        className="LandingProfessionalB"
+        src={LandingProfessionalB}
+        unoptimized
+        alt=""
+      />
       <S.ContentProfessional>
         <Row className="professional">
-          <Col span={12}>
-            <p className="the-all">The all-in-one solution</p>
-            <div className="professional-trading">
-              Professional Trading BOT using private Nodes
+          <Col sm={24} lg={12}>
+            <div>
+              <p className="the-all">The all-in-one solution</p>
+              <div className="professional-trading">
+                Professional Trading BOT using private Nodes
+              </div>
+              <p className="trade-securely">
+                Trade securely with unprecedented ease and tap into the
+                liquidity of these decentralized ecosystems.
+              </p>
             </div>
-            <p className="trade-securely">
-              Trade securely with unprecedented ease and tap into the liquidity
-              of these decentralized ecosystems.
-            </p>
             <div className="btn-dex">
               <Button
                 width="500px"
@@ -48,7 +56,7 @@ export default function LandingProfessional() {
               </Button>
             </div>
           </Col>
-          <Col span={12}>
+          <Col sm={24} lg={12}>
             <div className="image-right">
               <Image
                 className="image-grip"

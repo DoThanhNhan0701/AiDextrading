@@ -2,6 +2,7 @@ import Image from 'next/image';
 import * as S from './LandingTheModal';
 import logo from '@/public/icons/common/logo.svg';
 import Button from '@/components/core/common/Button';
+import LandingTheModalImage from '@/public/images/common/LandingTheModal.png';
 
 const investorLogos = [
   { src: '/icons/common/logo-investors.svg', width: 96.75, height: 28 },
@@ -17,7 +18,12 @@ const investorLogos = [
 export default function LandingTheModal() {
   return (
     <S.LandingTheModalWrap>
-      <div className="LandingTheModalImage" />
+      <Image
+        className="LandingTheModalImage"
+        src={LandingTheModalImage}
+        unoptimized
+        alt=""
+      />
       <S.Header>
         <div className="content-header">
           <div className="header-left">
@@ -28,6 +34,16 @@ export default function LandingTheModal() {
             <p>About</p>
             <p>Product</p>
             <p>Resources</p>
+          </div>
+          <div className="btn-hide">
+            <Button padding="8px 8px" type="primary">
+              <Image
+                src={'/icons/common/ri_menu-4-fill.svg'}
+                width={16}
+                height={16}
+                alt=""
+              />
+            </Button>
           </div>
           <div className="header-right">
             <Button height="40px" padding="9px 20px" type="primary">
@@ -53,6 +69,7 @@ export default function LandingTheModal() {
             with Jupiter, Orca, and Radium on the Solana network, SolTradingBot
             is your go-to companion for decentralized exchange transactions.
           </p>
+
           <div className="btn-contact-sales">
             <Button
               width="180px"

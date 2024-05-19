@@ -58,8 +58,8 @@ export default function LandingFaster() {
         </p>
       </div>
       <S.ContentMission>
-        <Row gutter={40}>
-          <Col span={14}>
+        <Row gutter={24} style={{ width: '100%' }}>
+          <Col xs={24} md={14}>
             <S.Mission>
               <span>Mission</span>
               <p>
@@ -93,7 +93,7 @@ export default function LandingFaster() {
               </div>
             </S.Mission>
           </Col>
-          <Col span={10}>
+          <Col xs={24} md={10}>
             <S.Vision>
               <span>Vision</span>
               <p>
@@ -106,29 +106,36 @@ export default function LandingFaster() {
         </Row>
         <S.OptimizedForSecurity>
           <div className="background">
-            <Image className="left" src={OptimizedLeft} unoptimized alt="" />
-            <Image className="right" src={OptimizedLeft} unoptimized alt="" />
+            <div>
+              <Image className="left" src={OptimizedLeft} alt="" fill />
+            </div>
+            <div>
+              <Image className="right" src={OptimizedLeft} alt="" fill />
+            </div>
           </div>
           <div className="content-base">
-            <Row className="content">
-              <Col span={10}>
-                <span className="title">Optimized for security</span>
-                <p className="description">
-                  Designed with a focus on security, the system employs robust
-                  encryption protocols, regular security updates, and advanced
-                  authentication measures to ensure a highly secure environment.
-                </p>
-                <Button
-                  padding="7px 30px"
-                  height="48px"
-                  width="178px"
-                  margin="30px 0 59px 0"
-                  type="primary"
-                >
-                  Learn More
-                </Button>
+            <Row>
+              <Col xs={24} md={10}>
+                <div className="left-content">
+                  <span className="title">Optimized for security</span>
+                  <p className="description">
+                    Designed with a focus on security, the system employs robust
+                    encryption protocols, regular security updates, and advanced
+                    authentication measures to ensure a highly secure
+                    environment.
+                  </p>
+                  <Button
+                    padding="7px 30px"
+                    height="48px"
+                    width="178px"
+                    margin="30px 0 59px 0"
+                    type="primary"
+                  >
+                    Learn More
+                  </Button>
+                </div>
               </Col>
-              <Col span={14}>
+              <Col xs={24} md={14}>
                 <Image
                   className="OptimizedAsset"
                   src={OptimizedAsset}
@@ -140,9 +147,9 @@ export default function LandingFaster() {
           </div>
         </S.OptimizedForSecurity>
         <S.ListFeatures>
-          <Row gutter={[80, 60]}>
+          <Row style={{ width: '100%' }} gutter={[80, 60]}>
             {data.map((item, index) => (
-              <Col span={8} key={index}>
+              <Col xs={24} sm={12} lg={8} key={index}>
                 <S.Item>
                   <div className="header">
                     <Image src={item.icon} width={24} height={24} alt="" />

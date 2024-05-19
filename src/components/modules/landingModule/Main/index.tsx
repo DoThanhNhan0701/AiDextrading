@@ -17,7 +17,9 @@ export default function MainLanding() {
         <LandingFaster />
         <LandingMoreThan />
         <LandingWhyTrust />
-        <LandingSctroll />
+      </div>
+      <LandingSctroll />
+      <div className="content-main-landing">
         <LandingExpand />
         <Footer />
       </div>
