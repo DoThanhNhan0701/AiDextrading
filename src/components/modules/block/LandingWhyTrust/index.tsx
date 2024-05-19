@@ -27,7 +27,7 @@ export default function LandingWhyTrust() {
   return (
     <S.LandingWhyTrust>
       <Row>
-        <Col span={14}>
+        <Col xs={24} xl={14}>
           <span className="title">Why trust us?</span>
           <p className="description">
             Our track record of reliability, transparency, and consistently
@@ -35,7 +35,7 @@ export default function LandingWhyTrust() {
             in our services.
           </p>
         </Col>
-        <Col span={10}>
+        <Col xs={24} xl={10}>
           <div className="list-btn">
             <div className="btn-why shadown">Realistic scenarios</div>
             <div className="btn-why">In depth Analysis</div>
@@ -49,9 +49,9 @@ export default function LandingWhyTrust() {
         </div>
         <p className="realistic-scenarios">Realistic scenarios</p>
         <S.ListRealisticScenarios>
-          <Row gutter={80}>
+          <Row>
             {data.map((item, index) => (
-              <Col span={8} key={index}>
+              <Col xs={24} md={12} lg={8} key={index}>
                 <S.ItemRealisticScenarios key={index}>
                   <div className="header">
                     <Image

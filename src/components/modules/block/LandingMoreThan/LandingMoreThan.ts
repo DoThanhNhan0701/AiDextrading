@@ -4,10 +4,22 @@ export const LandingMoreThanWrap = styled.div`
   margin-top: 160px;
   position: relative;
 
+  @media ${(props) => props.theme.breakpoints.smMax} {
+    margin-top: 80px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xsMax} {
+    margin-top: 10px;
+  }
+
   .LandingMoreThanWrap {
     width: 100%;
     height: 505px;
     border-radius: 48px;
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      height: 400px;
+    }
   }
 
   .title-header {
@@ -23,6 +35,11 @@ export const LandingMoreThanWrap = styled.div`
       font-size: 64px;
       line-height: 70.4px;
       text-align: center;
+
+      @media ${(props) => props.theme.breakpoints.smMax} {
+        font-size: 54px;
+        line-height: 59.4px;
+      }
     }
 
     .description {
@@ -32,6 +49,11 @@ export const LandingMoreThanWrap = styled.div`
       line-height: 28.8px;
       margin: auto;
       text-align: center;
+
+      @media ${(props) => props.theme.breakpoints.smMax} {
+        font-size: 16px;
+        line-height: 25px;
+      }
     }
 
     .btn-contact-sales {
@@ -48,5 +70,14 @@ export const LandingMoreThanWrap = styled.div`
     justify-content: center;
     margin-top: 76px;
     margin-bottom: 160px;
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .landing-asset-image {
+      width: 100%;
+    }
   }
 `;

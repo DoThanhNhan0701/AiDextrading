@@ -99,7 +99,8 @@ export const ButtonCommon = styled(Button)<ButtonPropsStyles>`
   ${(props) =>
     props.width &&
     css`
-      width: ${props.width};
+      max-width: ${props.width};
+      width: 100%;
     `}
 
   ${(props) =>

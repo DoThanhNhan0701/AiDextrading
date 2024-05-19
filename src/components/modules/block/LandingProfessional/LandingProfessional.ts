@@ -2,38 +2,36 @@ import styled from 'styled-components';
 
 export const LandingProfessionalWrap = styled.div`
   position: relative;
-
-  .LandingProfessional {
-    background-image: url(/images/common/LandingProfessional.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
+  .LandingProfessionalB {
     width: 100%;
-    max-width: 1360px;
-    height: auto;
-    aspect-ratio: 1360 / 969;
+    height: 969px;
     border-radius: 48px;
+    object-fit: cover;
+
+    @media ${(props) => props.theme.breakpoints.lgMax} {
+      height: 1300px;
+    }
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      height: 1200px;
+    }
+
+    @media ${(props) => props.theme.breakpoints.mdMax} {
+      height: 1250px;
+    }
   }
 `;
 
 export const ContentProfessional = styled.div`
+  top: 90px;
   position: absolute;
-  top: 0;
-  padding: 90px 0 0 0;
-  width: 100%;
-  background: linear-gradient(
-      270.08deg,
-      #060807 0.06%,
-      rgba(6, 8, 7, 0) 53.99%,
-      #060807 99.93%
-    ),
-    linear-gradient(180deg, rgba(6, 8, 7, 0) 0%, #060807 100%);
-  height: 100%;
-  border-radius: 48px;
-  padding-bottom: 51px;
 
   .professional {
     padding: 0 60px;
+
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      padding: 0 10px;
+    }
 
     .btn-dex {
       margin-top: 80px;
@@ -49,12 +47,21 @@ export const ContentProfessional = styled.div`
       );
       background-clip: text;
       color: transparent;
+
+      @media ${(props) => props.theme.breakpoints.smMax} {
+        text-align: center;
+      }
     }
 
     .professional-trading {
       margin-top: 30px;
       font-size: 64px;
       line-height: 70.4px;
+
+      @media ${(props) => props.theme.breakpoints.smMax} {
+        font-size: 54px;
+        line-height: 59.4px;
+      }
     }
 
     .trade-securely {
@@ -63,6 +70,11 @@ export const ContentProfessional = styled.div`
       color: #b5b5b5;
       margin-top: 30px;
       padding-right: 78px;
+
+      @media ${(props) => props.theme.breakpoints.smMax} {
+        font-size: 16px;
+        line-height: 25.6px;
+      }
     }
   }
 
@@ -72,9 +84,13 @@ export const ContentProfessional = styled.div`
     align-items: center;
     justify-content: center;
 
+    @media ${(props) => props.theme.breakpoints.smMax} {
+      margin: 25.5px 0 0 0;
+    }
+
     .image-grip {
       position: relative;
-      object-fit: contain;
+      object-fit: cover;
       width: 100%;
       height: 100%;
     }

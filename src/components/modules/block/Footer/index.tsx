@@ -1,12 +1,13 @@
-import { Col, Row } from 'antd';
-import * as S from './Footer';
 import Image from 'next/image';
+import { Col, Row } from 'antd';
+
+import * as S from './Footer';
 
 export default function Footer() {
   return (
     <S.FooterWrap>
-      <Row gutter={60}>
-        <Col span={10}>
+      <Row>
+        <Col xs={24} md={10}>
           <div className="logo">
             <Image
               src={'/icons/common/logo.svg'}
@@ -17,10 +18,9 @@ export default function Footer() {
             <span>AiDexTrading</span>
           </div>
         </Col>
-
-        <Col span={14}>
-          <Row gutter={60}>
-            <Col span={6}>
+        <Col className="list-product" xs={24} md={14}>
+          <Row>
+            <Col className="resource" xs={12} sm={6}>
               <S.Item>
                 <span className="title">Product</span>
                 <div className="list-menu">
@@ -30,7 +30,7 @@ export default function Footer() {
                 </div>
               </S.Item>
             </Col>
-            <Col span={6}>
+            <Col className="resource" xs={12} sm={6}>
               <S.Item>
                 <span className="title">Company</span>
                 <div className="list-menu">
@@ -40,7 +40,7 @@ export default function Footer() {
                 </div>
               </S.Item>
             </Col>
-            <Col span={6}>
+            <Col xs={12} sm={6} className="resource-develop">
               <S.Item>
                 <span className="title">Resources</span>
                 <div className="list-menu">
@@ -51,7 +51,7 @@ export default function Footer() {
                 </div>
               </S.Item>
             </Col>
-            <Col span={6}>
+            <Col xs={12} sm={6} className="resource-develop">
               <S.Item>
                 <span className="title">Developers</span>
                 <div className="list-menu">

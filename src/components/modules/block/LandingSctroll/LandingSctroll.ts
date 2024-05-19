@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const LandingSctroll = styled.div`
+  padding: 0 10px;
   margin-top: 28px;
   width: 100%;
 
@@ -9,11 +10,16 @@ export const LandingSctroll = styled.div`
     align-items: center;
     gap: 30px;
     overflow-x: auto;
+
+    @media ${(props) => props.theme.breakpoints.mdMax} {
+      flex-direction: column;
+    }
   }
 
   .item {
-    width: 620px;
     padding: 30px;
+    position: relative;
+    max-width: 620px !important;
     border: 1px solid #ffffff14;
     border-radius: 28px;
 

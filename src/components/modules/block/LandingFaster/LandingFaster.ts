@@ -21,7 +21,21 @@ export const LandingFasterWrap = styled.div`
   }
 `;
 
-export const ContentMission = styled.div``;
+export const ContentMission = styled.div`
+  width: 100%;
+
+  .ant-row {
+    @media ${(props) => props.theme.breakpoints.mdMax} {
+      margin: 0 !important;
+    }
+
+    .ant-col {
+      @media ${(props) => props.theme.breakpoints.mdMax} {
+        padding: 0 !important;
+      }
+    }
+  }
+`;
 
 export const Mission = styled.div`
   margin-top: 80px;
@@ -74,17 +88,29 @@ export const Mission = styled.div`
       border: 1px solid rgba(198, 245, 122, 0.4);
       border-radius: 8px;
 
+      @media ${(props) => props.theme.breakpoints.mdMax} {
+        left: 0;
+      }
+
       span {
         margin-left: 8px;
         font-weight: 500;
         font-size: 14px;
         line-height: 16.8px;
+
+        @media ${(props) => props.theme.breakpoints.mdMax} {
+          font-size: 12px;
+        }
       }
 
       p {
         font-size: 14px;
         margin-top: 0;
         line-height: 16.8px;
+
+        @media ${(props) => props.theme.breakpoints.mdMax} {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -114,7 +140,7 @@ export const Vision = styled.div`
     width: 100%;
     height: 100%;
     object-fit: contain;
-    margin-top: -99px;
+    margin-top: -108px;
   }
 `;
 
@@ -122,48 +148,64 @@ export const OptimizedForSecurity = styled.div`
   margin-top: 40px;
   position: relative;
   width: 100%;
-  text-align: center; //nhandt
+  border-radius: 48px;
+  overflow: hidden;
 
   .background {
+    position: absolute;
+    inset: 0;
+    display: flex;
     transform: rotateX(180deg);
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+    div {
+      position: relative;
+      flex: 1;
+      height: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: calc(100% + 1px) 50%;
+    }
 
     .right {
       transform: rotateY(180deg);
-      object-fit: contain;
-      /* width: 50%; */
     }
   }
 
   .content-base {
-    margin: 60px;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    padding: 60px;
+    height: 100%;
 
-    .content {
-      top: 10%;
-      width: 100%;
-      position: absolute;
-      padding: 31.47px;
-    }
+    .left-content {
+      .title {
+        margin-top: 59px;
+        font-size: 40px;
+        line-height: 44px;
+        display: block;
+        text-align: left;
+      }
 
-    .title {
-      margin-top: 59px;
-      font-size: 40px;
-      line-height: 44px;
-      display: block;
-      text-align: left;
-    }
-
-    .description {
-      font-size: 18px;
-      line-height: 28.8px;
-      max-width: 456px;
-      margin-top: 24px;
+      .description {
+        font-size: 18px;
+        line-height: 28.8px;
+        max-width: 456px;
+        margin-top: 24px;
+        text-align: left;
+      }
     }
   }
 
   .OptimizedAsset {
     width: 100%;
-    margin-left: -88px;
+    height: 400px;
+    object-fit: contain;
   }
 `;
 
@@ -172,6 +214,9 @@ export const ListFeatures = styled.div`
 `;
 
 export const Item = styled.div`
+  width: 100%;
+  padding: 10px;
+
   .header {
     display: flex;
     align-items: center;
