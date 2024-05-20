@@ -14,7 +14,7 @@ export default function LandingProfessional() {
         unoptimized
         alt=""
       />
-      <S.ContentProfessional>
+      <S.ContentProfessional className="open-to-view">
         <Row className="professional">
           <Col sm={24} lg={12}>
             <div>

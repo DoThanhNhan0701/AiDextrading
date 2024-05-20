@@ -28,7 +28,7 @@ export default function LandingMoreThan() {
           </Button>
         </div>
       </div>
-      <div className="landing-asset">
+      <div className="landing-asset open-to-view">
         <Image
           className="landing-asset-image"
           src={LandingAsset}

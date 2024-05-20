@@ -16,31 +16,31 @@ const data = [
       'Absolute compatibility with DEXs. Ensures maximum multi-threaded transaction speed',
   },
   {
-    icon: '/icons/features/icon1.svg',
+    icon: '/icons/features/icon2.svg',
     title: 'Security Takes Priority',
     description:
       'A decentralized cloud data management method ensures security and reliability',
   },
   {
-    icon: '/icons/features/icon1.svg',
+    icon: '/icons/features/icon3.svg',
     title: 'Private Transactions',
     description:
       'User transactions are executed privately, minimizing losses due to slippage',
   },
   {
-    icon: '/icons/features/icon1.svg',
+    icon: '/icons/features/icon4.svg',
     title: 'Direct Referral System',
     description:
       'Referral other users to use BOT to receive passive commissions',
   },
   {
-    icon: '/icons/features/icon1.svg',
+    icon: '/icons/features/icon5.svg',
     title: 'Flat UI Easy To Use',
     description:
       'Intuitive and simple interface even for new or advanced users',
   },
   {
-    icon: '/icons/features/icon1.svg',
+    icon: '/icons/features/icon6.svg',
     title: 'Staking BOT tokens',
     description:
       'Stake AiDexTradingBot`s stable tokens to earn passive income without trading',
@@ -60,7 +60,7 @@ export default function LandingFaster() {
       <S.ContentMission>
         <Row gutter={24} style={{ width: '100%' }}>
           <Col xs={24} md={14}>
-            <S.Mission>
+            <S.Mission className="open-to-view-left">
               <span>Mission</span>
               <p>
                 Our mission is to democratize access to advanced trading tools
@@ -94,7 +94,7 @@ export default function LandingFaster() {
             </S.Mission>
           </Col>
           <Col xs={24} md={10}>
-            <S.Vision>
+            <S.Vision className="open-to-view-left">
               <span>Vision</span>
               <p>
                 Our vision at AiDexTrading is to be the leading force in shaping
@@ -113,7 +113,7 @@ export default function LandingFaster() {
               <Image className="right" src={OptimizedLeft} alt="" fill />
             </div>
           </div>
-          <div className="content-base">
+          <div className="content-base open-to-view">
             <Row>
               <Col xs={24} md={10}>
                 <div className="left-content">
