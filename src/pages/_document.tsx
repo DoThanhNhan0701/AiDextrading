@@ -54,7 +54,7 @@ export default class MyDocument extends Document {
           />
           <link
             rel="shortcut icon"
-            href="/icons/logo-new/velociti-logo-yellow.svg"
+            href="/icons/common/logo.svg"
             type="image/x-icon"
           />
         </Head>

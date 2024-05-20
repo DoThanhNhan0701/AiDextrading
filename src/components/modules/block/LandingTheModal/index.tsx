@@ -54,7 +54,7 @@ export default function LandingTheModal() {
             </Button>
           </div>
         </div>
-        <S.ContentBlock>
+        <S.ContentBlock className="open-to-view">
           <div className="grow-on-your">
             <Button height="36px" padding="7px 16px" type="primary">
               Grow on Your Own Bot
