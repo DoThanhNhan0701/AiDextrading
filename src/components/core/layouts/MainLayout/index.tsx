@@ -22,6 +22,25 @@ export default function MainLayout({
         <title>{title}</title>
         <meta name="description" content="AiDextrading - web" />
         <meta name="keywords" content="AiDextrading - web" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content="AiDextrading - web" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={typeof window !== 'undefined' ? window.location.href : ''}
+        />
+        <meta
+          property="og:image"
+          content="https://cdn-icons-png.flaticon.com/512/124/124021.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content="AiDextrading - web" />
+        <meta
+          name="twitter:image"
+          content="https://cdn-icons-png.flaticon.com/512/124/124021.png"
+        />
       </Head>
       <S.AdminLayoutWrap>
         <Layout className="site-layout">
